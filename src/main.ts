@@ -4,7 +4,10 @@ import router from './router'
 
 import '@/assets/styles/base.less'
 import '@/assets/styles/iconfont.less'
+
+import'@/mock/index'
 import { Tab, Tabs } from 'vant';
+
 
 
 

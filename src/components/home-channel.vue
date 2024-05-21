@@ -9,7 +9,15 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
+import axios from 'axios'
 const active =ref(0)
+
+axios({
+    url: '/navList',
+    method:'get'
+}).then(res => {
+    console.log(res.data)
+})
 </script>
 <style>
     
