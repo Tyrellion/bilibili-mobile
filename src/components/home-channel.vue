@@ -11,12 +11,14 @@
 import { ref } from 'vue'
 import axios from 'axios'
 const active =ref(0)
+const list =ref([])
 
 axios({
     url: '/navList',
     method:'get'
 }).then(res => {
     console.log(res.data)
+    list.value=res.data.result
 })
 </script>
 <style>
