@@ -6,7 +6,7 @@ import '@/assets/styles/base.less'
 import '@/assets/styles/iconfont.less'
 
 import'@/mock/index'
-import { Tab, Tabs } from 'vant';
+import { Tab, Tabs ,Swipe, SwipeItem } from 'vant';
 
 
 
@@ -14,5 +14,7 @@ import { Tab, Tabs } from 'vant';
 const app = createApp(App);
 app.use(Tab);
 app.use(Tabs);
+app.use(Swipe);
+app.use(SwipeItem);
 app.use(router)
 app.mount('#app')
