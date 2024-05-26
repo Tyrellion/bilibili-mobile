@@ -1,26 +1,46 @@
 <template>
-  <router-link class="v-card" :to="`/video/0`">
+  <router-link class="v-card" :to="`/video/${video.id}`">
     <div class="card">
       <div class="card-img">
-        <img class="pic" src="@/assets/images/loading.png" alt="视频描述" />
+        <img class="pic" :src="video.imgSrc" :alt="video.desc" />
       </div>
       <div class="count">
         <span>
           <i class="iconfont icon_shipin_bofangshu"></i>
-          41.4万
+          {{ video.playCount }}
         </span>
         <span>
           <i class="iconfont icon_shipin_danmushu"></i>
-          1314
+          {{ video.commentCount }}
         </span>
       </div>
     </div>
-    <p class="title">当你觉得扛不住的时候来看看这段视频</p>
+    <p class="title">{{ video.desc }}</p>
   </router-link>
 </template>
 
 <script setup lang="ts">
+import { defineProps, PropType } from 'vue'
 
+interface IVideoItem {
+  id: number
+  imgSrc: string
+  desc: string
+  playCount: string
+  commentCount: string
+  videoSrc: string
+}
+
+// 父传子需要通过 defineProps 接收
+// PropType 用于指定格式
+defineProps({
+  video: {
+    // Object 对象为 IVideoItem 接口格式
+    // 需要定义这个接口类型，所以需要导入ProType
+    type: Object as PropType<IVideoItem>,
+    required: true
+  }
+})
 </script>
 
 <style lang="less" scoped>
