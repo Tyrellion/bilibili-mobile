@@ -55,7 +55,7 @@ defineProps({
     overflow: hidden;
     .card-img {
       .pic {
-        height: 100px;
+        height: 27vw;
         width: 100%;
         object-fit: cover;
       }
