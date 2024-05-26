@@ -5,7 +5,7 @@
   <HomeChannel/>
   <!-- 轮播组件 -->
   <HomeSwipe/>
-   <!-- 视频组件 -->
+   <!-- 视频列表 -->
    <HomeVideoList />
  
 </template>
