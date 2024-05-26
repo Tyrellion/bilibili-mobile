@@ -1,6 +1,6 @@
 <template>
   <van-tabs v-model:active="active">
-    <van-tab v-for="item in list" :key="item.id" :title="item.text">内容 1</van-tab><!-- 上一个博客是直接在标签内的小标签用所有没有用上冒号 -->
+    <van-tab v-for="item in list" :key="item.id" :title="item.text"></van-tab><!-- 上一个博客是直接在标签内的小标签用所有没有用上冒号 -->
   </van-tabs>
 </template>
 <script setup lang="ts">
