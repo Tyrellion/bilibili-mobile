@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, PropType } from 'vue'
+import { PropType } from 'vue'
 // 🔔 进阶用法：如果多个地方都用到同样的接口定义，还可以把接口抽离出去独立维护
 import { IVideoInfo } from '../types'
 
