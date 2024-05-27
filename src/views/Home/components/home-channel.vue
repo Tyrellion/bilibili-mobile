@@ -21,4 +21,8 @@ axios({
   list.value = res.data.result;
 });
 </script>
-<style></style>
+<style>
+body{
+  --van-tabs-bottom-bar-color: #fb6371;/* tab底部滑块颜色 */
+}
+</style>
